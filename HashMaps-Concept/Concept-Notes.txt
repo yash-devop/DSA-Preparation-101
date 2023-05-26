@@ -1,0 +1,102 @@
+HashMap is a class in the Java Collections framework that provides an implementation of the Map interface. It allows you to store key-value pairs and efficiently retrieve values based on their associated keys. HashMap uses a hash table data structure internally to provide fast access and retrieval of elements.
+
+To use HashMap, you need to import the java.util.HashMap class in your Java program.
+
+Here's an overview of some key concepts related to HashMap:
+
+1 ) HashMap Operations:
+
+a) Adding an element: You can add a key-value pair to a HashMap using the put(key, value) method.
+b) Retrieving a value: You can retrieve a value associated with a specific key using the get(key) method.
+c) Removing an element: You can remove a key-value pair from the HashMap using the remove(key) method.
+d) Checking if a key exists: You can check if a key is present in the HashMap using the containsKey(key) method.
+e) Checking if a value exists: You can check if a value is present in the HashMap using the containsValue(value) method.
+
+2) Key and Value Types:
+
+a) Keys:   Keys in a HashMap must be unique and should have proper implementations of hashCode() and equals() methods. Common  key types are String, Integer, or custom objects.
+b) Values: Values in a HashMap can be of any type, including primitive types and objects.
+
+3) HashMap Efficiency:
+
+-> HashMap provides constant-time performance (O(1)) for basic operations like adding, retrieving, and removing elements, on average.
+-> The actual performance may degrade to O(n) in the worst case scenario, where n is the number of elements in the HashMap.
+-> The efficiency of HashMap depends on the quality of the hash function used for the key objects.
+
+
+
+Example 1: Adding and Retrieving Elements
+
+
+=>
+
+import java.util.HashMap;
+
+public class Example {
+    public static void main(String[] args) {
+        HashMap<String, Integer> map = new HashMap<>();
+	 //     < key  ,  value >
+        // Adding elements
+        map.put("John", 25);
+        map.put("Alice", 30);
+        map.put("Bob", 28);
+
+        // Retrieving values
+        int age = map.get("Alice");
+        System.out.println("Alice's age: " + age);  // Output: Alice's age: 30
+    }
+}
+
+
+MCQ 1: Which method is used to add an element to a HashMap?
+a) add(key, value)    
+b) put(key, value)			=> CORRECT
+c) insert(key, value)
+d) set(key, value)
+
+
+MCQ 2: What is the time complexity of adding an element to a HashMap?
+a) O(1)		=> CORRECT
+b) O(log n)
+c) O(n)
+d) O(n^2)
+
+
+
+Example 2: Removing Elements
+
+=>
+
+import java.util.HashMap;
+
+public class Example {
+    public static void main(String[] args) {
+        HashMap<String, Integer> map = new HashMap<>();
+
+        // Adding elements
+        map.put("John", 25);
+        map.put("Alice", 30);
+        map.put("Bob", 28);
+
+        // Removing elements
+        map.remove("Alice");  // removes the whole element(means whole key-value )
+
+
+        // Checking if key exists
+        boolean containsKey = map.containsKey("Alice");
+        System.out.println("Contains Alice? " + containsKey);  // Output: Contains Alice? false
+    }
+}
+
+
+MCQ 3: Which method is used to remove an element from a HashMap?
+a) remove(key)		=> CORRECT
+b) delete(key)
+c) pop(key)
+d) erase(key)
+
+MCQ 4: What is the time complexity of removing an element from a HashMap?
+a) O(1)		=> CORRECT
+b) O(log n)
+c) O(n)
+d) O(n^2)

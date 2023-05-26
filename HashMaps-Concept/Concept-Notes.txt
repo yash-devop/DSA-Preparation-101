@@ -100,3 +100,40 @@ a) O(1)		=> CORRECT
 b) O(log n)
 c) O(n)
 d) O(n^2)
+
+
+
+
+getOrDefault() in Hashmap
+
+The getOrDefault(key, defaultValue) method is a utility method provided by the HashMap class in Java. It is used to retrieve the value associated with a given key from the HashMap. If the key is found in the HashMap, the corresponding value is returned. If the key is not found in the HashMap, the defaultValue is returned instead.
+
+Here's how the getOrDefault method works:
+
+1) If the key is present in the HashMap, the method returns the value associated with that key.
+2) If the key is not present in the HashMap, the method returns the defaultValue provided.
+
+
+Example : 
+=>
+
+import java.util.HashMap;
+
+public class Example {
+    public static void main(String[] args) {
+        HashMap<String, Integer> map = new HashMap<>();
+        
+        map.put("John", 25);
+        map.put("Alice", 30);
+
+	// output is : {"john":25 , "alice":30}
+		
+	// now : getOrDefault will return the Value of the asked Key else Return DefaultValue.
+
+        int age1 = map.getOrDefault("John", 0);
+        System.out.println("John's age: " + age1);  // Output: John's age: 25
+
+        int age2 = map.getOrDefault("Bob", 0);
+        System.out.println("Bob's age: " + age2);   // Output: Bob's age: 0
+    }
+}

@@ -11,7 +11,7 @@ public class CyclicSort {
     static void sort(int[] arr) {
         int i = 0;
         while (i < arr.length) {  // when it gets equal to the length , means it already sorted.. exit loop.
-            int correct = arr[i] - 1; // range [ 0  to N ]
+            int correct = arr[i] - 1; // range [ 1  to N ]
             if (arr[i] != arr[correct]) {
                 swap(arr, i , correct);  // not equal , swap the elements to their correct position.
             } else {

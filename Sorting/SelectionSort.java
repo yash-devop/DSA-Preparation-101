@@ -3,7 +3,6 @@
  element in its Correct index.
  */
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class SelectionSort {

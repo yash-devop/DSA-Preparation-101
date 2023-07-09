@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class firstLastOccurence {
     public static void main(String[] args) {
         int[] arr = {5,7,7,7,7,8,8,10};
-        int target = 6;
+        int target = 7;
         int[] ans = {-1,-1};
         
         ans[0] = BinSearch(arr, target , true);  // left

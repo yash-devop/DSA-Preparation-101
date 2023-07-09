@@ -24,7 +24,7 @@ public class searchInRotatedSortedarr {
             return binarySearch(arr, target,0,arr.length -1);
         }
         // if pivot is found , you have found 2 asc sorted arrays.
-        if(nums[pivot] == target){
+        if(arr[pivot] == target){
             return pivot;
         }
     }

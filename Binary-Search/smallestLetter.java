@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-public class smallestLetter {
-    /*
-    leetcode: 744 ( go and check the quest for better understanding.)
-     Find the smallest letter greater than the target.
-
-     */
-    public static void main(String[] args) {
-        char[] letters = {'c', 'f','j'};
-        char target = 'a';
-        System.out.println(nextGreatestLetter(letters,target));
-    }
-    static char nextGreatestLetter(char[] letters , char target){
-=======
-
 public class smallestLetter {
     // leetcode 744.
     // Find smallest letter greater than target.
@@ -27,7 +12,6 @@ public class smallestLetter {
         System.out.println(smallestletter(letters, target));
     }
     static char smallestletter(char[] letters, char target){
->>>>>>> 0c9fe58bff3502a06753a632feb1a7369f4ddb32
         int start = 0;
         int end = letters.length - 1;
 
@@ -43,9 +27,4 @@ public class smallestLetter {
         }
         return letters[start % letters.length];
     }
-<<<<<<< HEAD
-    
-
-=======
->>>>>>> 0c9fe58bff3502a06753a632feb1a7369f4ddb32
 }

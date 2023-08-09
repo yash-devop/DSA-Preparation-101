@@ -89,6 +89,98 @@ package LinkedListDemo;
             size += 1; // size++;
         } 
 
+        public void InsertRecursion(int val,  int index){
+            head = insertRecursion(val,index, head);
+        }
+
+        private Node insertRecursion(int val,  int index, Node node){
+            // Recursion Base Condition
+            if(index == 0){
+                // create the node that we want to insert.
+                Node temp = new Node(val, node);  // Node(value, currentNode);
+                size++;
+                return temp;  // return the node that is current being ADDED.
+            }
+            /*
+              private Node insertRecursion(int value,  int index, Node node) 
+              here Node node is the Current Node.next
+                  0    1    2    3
+              eg: 3 -> 5 -> 9 -> 1 -> NULL
+
+                suppose at recursion call is at index 1,
+                then , insertRecursion(value, index--, node.next); 
+                here node is the node at index 1. so its next will be 9
+
+
+             */
+            node.next = insertRecursion(val, --index, node.next);  // for every function call, the node is that NODE itself.
+
+            return node;
+
+
+        }
+
+
+        // Leetcode quesno, 83
+
+        public void removeDup(){
+            Node temp = head;
+            while(temp.next !=null){  // go till the temp's next element is not null , else break while loop
+                if(temp.value == temp.next.value){
+                    // we found the duplicate value.
+                    temp.next = temp.next.next;
+                }
+                else{
+                    // no duplicates found !
+                    temp = temp.next;
+                }
+            }
+            tail = temp; // now the end TAIL will be our TEMP coz after traversing TEMP is Point to the end element.
+            tail.next = null; // set the TAIL's next to NULL as we do usually.
+        }
+
+
+        //  Merge the Sorted List.
+
+        // linkedListeg first , linkedListeg second   are 2 seperate linkedlists.
+        public static linkedListeg merge(linkedListeg first , linkedListeg second ){
+            // f and s are head1 and head2.
+            Node f = first.head;
+            Node s = second.head;
+
+            linkedListeg ans = new linkedListeg();
+            while(f != null && s != null){  // if any one becomes null , end it...
+                if(f.value < s.value){
+                    ans.insertAtLast(f.value);
+                    f = f.next;
+                }
+                else{
+                    ans.insertAtLast(s.value);
+                    s = s.next;
+                }
+            }
+            // check if the first is null , then put the remaining from second into the ANS linkedlist.
+            // any one of these while loops will run.
+            while(f != null){
+                ans.insertAtLast(f.value);
+                f = f.next;
+            }
+            while(s != null){
+                ans.insertAtLast(s.value);
+                s= s.next;
+
+            }
+
+            return ans;
+        }
+        
+
+
+
+
+
+
+
         // Delete First.
         public int deleteFirst(){
             int val = head.value;

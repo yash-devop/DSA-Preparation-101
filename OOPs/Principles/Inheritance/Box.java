@@ -4,6 +4,7 @@ public class Box {
     double height;
     double width;
     double weight;
+    String alpha;
 
     Box() {  // Box box = new Box();
         this.height = -1;
@@ -35,7 +36,7 @@ public class Box {
         this.length= oldBox.length;
     }
 
-    public static void information(){
+    public void information(){
         System.out.println("Running the box");
     }
 }

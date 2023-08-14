@@ -1,8 +1,10 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MergeSort{
     public static void main(String[] args) {
+        // int[] arr = {5,8,2,4,3,10};
         int[] arr = {5,4,3,2,1};
         arr = merge(arr);
         System.out.println(Arrays.toString(arr));
@@ -15,6 +17,11 @@ public class MergeSort{
 
          int mid = arr.length / 2;
 
+        //  int[] arr = {5,4,3,2,1};
+         /*
+          so , left will be : {5,4}
+          so , right will be : {3,2,1}
+          */
          int[] left = merge(Arrays.copyOfRange(arr, 0 , mid)); // copyRange function will create a newArray of size 0 till mid
          int[] right = merge(Arrays.copyOfRange(arr, mid , arr.length)); 
     

@@ -1,6 +1,6 @@
 package AccessModifiers;
 public class A{
-    protected int num;
+    private int num;
     String name;
     int[] arr;
 

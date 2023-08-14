@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class InPlacemergeSort {
     public static void main(String[] args) {
         int[] arr = { 5, 4, 3, 2, 1 };
+        // int[] arr = {5,8,2,4,3,10};
         mergeInPlace(arr,0,arr.length);
         System.out.println(Arrays.toString(arr));
 

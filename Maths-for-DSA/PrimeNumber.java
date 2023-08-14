@@ -1,9 +1,10 @@
 public class PrimeNumber{
     public static void main(String[] args){
-        int num = 40;
-        for (int i = 2; i <= num; i++) {   // visual representation only, nothing else.
-            System.out.println(i + "=" + isPrime3(i));
-        }
+        int num = 13;
+        // for (int i = 2; i <= num; i++) {   // visual representation only, nothing else.
+        //     System.out.println(i + "=" + isPrime3(i));
+        // }
+        System.out.println(isPrime3(num));
     }
     // Method1. 
     static String isPrime1(int num){
@@ -22,6 +23,7 @@ public class PrimeNumber{
         if(num <=1){
             return "Not a prime";
         }
+        System.out.println(Math.sqrt(num));
         for(int i=2;i<=Math.sqrt(num);i++){
             if(num % i == 0){
                 return "No a prime";
